@@ -55,6 +55,30 @@
     exitButton.mzcLayoutMarginLeft = 10;
     [exitButton addTarget:self action:@selector(pressedButtonToExit:) forControlEvents:UIControlEventTouchUpInside];
     [myHead addSubview:exitButton];
+    
+    UILabel* titleLabel = [UILabel new];
+    titleLabel.mzcID = @"headTitle";
+    titleLabel.backgroundColor = [UIColor greenColor];
+    titleLabel.mzcLayoutWeight = 1;
+    titleLabel.mzcLayoutHeight = 30;
+    titleLabel.mzcLayoutGravity = MZCLayoutGravityCenter;
+    titleLabel.mzcLayoutMargin = 10;
+    [myHead addSubview:titleLabel];
+    
+    UIButton* rightButton = [UIButton new];
+    rightButton.backgroundColor = [UIColor blueColor];
+    rightButton.mzcLayoutWidth = 60;
+    rightButton.mzcLayoutHeight = 40;
+    rightButton.mzcLayoutGravity = MZCLayoutGravityCenter;
+    rightButton.mzcLayoutMarginRight = 10;
+    [rightButton addTarget:self action:@selector(pressedButtonToExit:) forControlEvents:UIControlEventTouchUpInside];
+    [myHead addSubview:rightButton];
+    
+    
+    
+    
+    UILabel* label = (UILabel*)[self.view mzcFindViewByID:@"headTitle"];
+    label.text = @"这是一个标题";
 }
 
 
