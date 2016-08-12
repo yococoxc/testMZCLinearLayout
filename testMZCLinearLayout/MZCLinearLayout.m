@@ -8,7 +8,12 @@
 
 #import "MZCLinearLayout.h"
 
+#import "NSObject+XWAdd.h"
+
 @implementation MZCLinearLayout
+{
+    BOOL isOK;
+}
 
 - (instancetype) initWithOrientation:(MZCLayoutOrientation)orientation
 {
@@ -64,27 +69,64 @@
 {
     [super didMoveToSuperview];
     
-    [self.superview addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:@"test_super_view"];
+    
+    [self.superview xw_addObserverBlockForKeyPath:@"frame" block:^(id  _Nonnull obj, id  _Nonnull oldVal, id  _Nonnull newVal) {
+        if (obj == self.superview) {
+            [self changedWithSuperView];
+        }
+        
+        [self changedWithSubView];
+    }];
+    
+//    [self.superview addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:@"test_super_view"];
+    if (!isOK) {
+        
+        isOK = YES;
+    } else {
+        
+        isOK = NO;
+    }
+    
     
     if (self.mzcID && [self.mzcID isEqualToString:@"myLayout"]) {
         NSLog(@"superview %@", self.superview);
     }
-    
+    NSLog(@"%s   %@", __func__,self);
     
     [self changedWithSuperView];
     
 }
 
 
-#pragma mark - 事件响应
-- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+- (void) willRemoveSubview:(UIView *)subview
 {
-    if (object == self.superview) {
-        [self changedWithSuperView];
-    }
+    [super willRemoveSubview:subview];
     
-    [self changedWithSubView];
+    [self.superview removeObserver:self forKeyPath:@"frame" context:@"test_super_view"];
 }
+
+- (void) didMoveToWindow
+{
+    [super didMoveToWindow];
+    
+    NSLog(@"%s   %@", __func__,self);
+    
+//    if (isOK) {
+//
+//    }
+    
+}
+
+
+//#pragma mark - 事件响应
+//- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+//{
+//    if (object == self.superview) {
+//        [self changedWithSuperView];
+//    }
+//    
+//    [self changedWithSubView];
+//}
 
 
 

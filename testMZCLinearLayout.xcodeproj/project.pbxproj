@@ -16,6 +16,8 @@
 		728B0CB71D5D7DCD009BFF1B /* UIView+MZCLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 728B0CB41D5D7DCD009BFF1B /* UIView+MZCLayout.m */; };
 		728B0CB81D5D7DCD009BFF1B /* MZCLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 728B0CB61D5D7DCD009BFF1B /* MZCLinearLayout.m */; };
 		728B0CBB1D5D7DD4009BFF1B /* UIView+MZC.m in Sources */ = {isa = PBXBuildFile; fileRef = 728B0CBA1D5D7DD4009BFF1B /* UIView+MZC.m */; };
+		728B0CBE1D5DBAB9009BFF1B /* ViewControllerA.m in Sources */ = {isa = PBXBuildFile; fileRef = 728B0CBD1D5DBAB9009BFF1B /* ViewControllerA.m */; };
+		728B0CC11D5DC5D9009BFF1B /* NSObject+XWAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 728B0CC01D5DC5D9009BFF1B /* NSObject+XWAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,10 @@
 		728B0CB61D5D7DCD009BFF1B /* MZCLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCLinearLayout.m; sourceTree = "<group>"; };
 		728B0CB91D5D7DD4009BFF1B /* UIView+MZC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MZC.h"; sourceTree = "<group>"; };
 		728B0CBA1D5D7DD4009BFF1B /* UIView+MZC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MZC.m"; sourceTree = "<group>"; };
+		728B0CBC1D5DBAB9009BFF1B /* ViewControllerA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerA.h; sourceTree = "<group>"; };
+		728B0CBD1D5DBAB9009BFF1B /* ViewControllerA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerA.m; sourceTree = "<group>"; };
+		728B0CBF1D5DC5D9009BFF1B /* NSObject+XWAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XWAdd.h"; sourceTree = "<group>"; };
+		728B0CC01D5DC5D9009BFF1B /* NSObject+XWAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XWAdd.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,8 @@
 		728B0C9B1D5D7DBA009BFF1B /* testMZCLinearLayout */ = {
 			isa = PBXGroup;
 			children = (
+				728B0CBF1D5DC5D9009BFF1B /* NSObject+XWAdd.h */,
+				728B0CC01D5DC5D9009BFF1B /* NSObject+XWAdd.m */,
 				728B0CB91D5D7DD4009BFF1B /* UIView+MZC.h */,
 				728B0CBA1D5D7DD4009BFF1B /* UIView+MZC.m */,
 				728B0CB31D5D7DCD009BFF1B /* UIView+MZCLayout.h */,
@@ -82,6 +90,8 @@
 				728B0CAA1D5D7DBA009BFF1B /* LaunchScreen.storyboard */,
 				728B0CAD1D5D7DBA009BFF1B /* Info.plist */,
 				728B0C9C1D5D7DBA009BFF1B /* Supporting Files */,
+				728B0CBC1D5DBAB9009BFF1B /* ViewControllerA.h */,
+				728B0CBD1D5DBAB9009BFF1B /* ViewControllerA.m */,
 			);
 			path = testMZCLinearLayout;
 			sourceTree = "<group>";
@@ -170,6 +180,8 @@
 				728B0CBB1D5D7DD4009BFF1B /* UIView+MZC.m in Sources */,
 				728B0CA11D5D7DBA009BFF1B /* AppDelegate.m in Sources */,
 				728B0C9E1D5D7DBA009BFF1B /* main.m in Sources */,
+				728B0CC11D5DC5D9009BFF1B /* NSObject+XWAdd.m in Sources */,
+				728B0CBE1D5DBAB9009BFF1B /* ViewControllerA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
